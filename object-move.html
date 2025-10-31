@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>object move</title>
+</head>
+
+<body>
+    <section class="bg-slate-500 h-200 p-32">
+        <div class="relative h-100 w-100 m-auto bg-amber-600 mb-16">
+            <div id="object" class="absolute rounded-full bg-blue-600 h-32 w-32">
+
+            </div>
+
+        </div>
+
+        <div class="flex gap-5">
+            <div>
+                <b onclick="MoveTopLeft('absolute top-0 left-0')"
+                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    TOP-LEFT
+                </b>
+            </div>
+
+            <div>
+                <b onclick="MoveTopRight('absolute top-0 right-0')"
+                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    TOP-RIGHT
+                </b>
+            </div>
+
+            <div>
+                <b onclick="MoveCenter('absolute bottom-0 right-0')"
+                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    CENTER
+                </b>
+            </div>
+            <div>
+                <b onclick="MoveBottomRight('absolute bottom-0-0 right-0')"
+                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    BOTTOM-RIGH
+                </b>
+            </div>
+            <div>
+                <b onclick="MovebottomLeft('absolute top-0 right-0')"
+                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    BOTTOM-LEFT
+                </b>
+            </div>
+        </div>
+
+
+        <script>
+            let MoveTopRight = () => {
+                const object = document.getElementById('object');
+                object.classList.remove('top-0', 'left-0');
+                object.classList.add('top-0', 'right-0');
+            }
+
+            let MoveTopLeft = () => {
+                const object = document.getElementById('object');
+                object.classList.remove('top-0', 'right-0');
+                object.classList.add('top-0', 'left-0');
+            }
+
+             let MoveBottomRight = () => {
+                const object = document.getElementById('object');
+                object.classList.remove('top-0', 'left-0');
+                object.classList.add('bottom-0', 'right-0');
+            }
+
+            let MovebottomLeft = () => {
+                const object = document.getElementById('object');
+                object.classList.remove('bottom-0', 'right-0');
+                object.classList.add('bottom-0', 'left-0');
+            }
+        </script>
+
+
+    </section>
+</body>
+
+</html>

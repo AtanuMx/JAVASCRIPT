@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>color change</title>
+</head>
+<body>
+    <section class="bg-slate-500 h-400 p-5">
+        <div id="colorchange" class="w-52 h-52 m-auto bg-black">
+
+        </div>
+
+        <div class="flex justify-center mt-5">
+            
+            <div>
+                <b onclick="changeColor('red')" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold mr-2">
+                    RED
+                </b>
+            </div>
+            <div>
+                <b onclick="changeColor('green')" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold mr-2">
+                    GREEN
+                </b>
+            </div>
+            <div>
+                <b onclick="changeColor('blue')" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold mr-2">
+                    BLUE
+                </b>
+            </div>
+            <div>
+                <b onclick="changeColor('gray')" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold mr-2">
+                    GRAY
+                </b>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        let changeColor = (color) => {
+            document.getElementById('colorchange').style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

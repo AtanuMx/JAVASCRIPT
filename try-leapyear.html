@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <div id="calculator" class="bg-slate-700 max-w-96 h-100 p-5 mx-auto mt-20">
+
+        <div>
+            <label class="text-white font-bold" for="year">Enter Year</label>
+            <input class="py-3 mt-2 px-20 bg-white rounded-sm" type="text" id="year">
+        </div> 
+
+        <div class="flex justify-end mt-4">
+            <a href="" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold">Check</a>
+        </div>
+
+        <div id="color-input">
+            <input type="color" onchange="changeColor(event)">
+        </div>
+
+    </div>
+
+    <script>
+        let calculatorDiv = document.getElementById('calculator');
+
+        let changeColor = (event) => {
+            console.log(event);
+            
+            calculatorDiv.style.backgroundColor = event.target.value
+        }
+    </script>
+</body>
+
+</html>
