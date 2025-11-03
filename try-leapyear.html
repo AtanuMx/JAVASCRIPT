@@ -14,15 +14,19 @@
 
         <div>
             <label class="text-white font-bold" for="year">Enter Year</label>
-            <input class="py-3 mt-2 px-20 bg-white rounded-sm" type="text" id="year">
+            <input class="py-3 mt-2 w-87 block bg-white rounded-sm" type="text" id="year">
         </div> 
 
         <div class="flex justify-end mt-4">
-            <a href="" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold">Check</a>
+            <b onclick="checkYear()" href="" class="py-0.5 px-3 bg-amber-50 rounded-sm font-bold">Check</b>
+        </div>
+
+        <div>
+            <label for="" id="result" class="text-amber-50 font-bold"></label>
         </div>
 
         <div id="color-input">
-            <input type="color" onchange="changeColor(event)">
+            <input type="color" class="border-4 border-amber-50 mt-7" onchange="changeColor(event)">
         </div>
 
     </div>
@@ -31,10 +35,31 @@
         let calculatorDiv = document.getElementById('calculator');
 
         let changeColor = (event) => {
-            console.log(event);
             
             calculatorDiv.style.backgroundColor = event.target.value
         }
+
+            let checkYear = () => {
+                let year = document.getElementById('year').value;
+                let result = 'not checked';
+
+                if (year % 4 == 0) {
+                    if (year % 100 == 0) {
+                        if (year % 400 == 0) {
+                            result = " leap year"
+                        } else {
+                            result = " not leap year";
+                        }
+                    } else {
+                        result = "leap year"
+                    }
+                } else {
+                    result = " not leap year";
+                }
+
+                // document.getElementById('result').textContent = result;
+                document.getElementById('result').innerText = result;
+            }
     </script>
 </body>
 
