@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>object move</title>
+</head>
+
+<body>
+
+    <button onclick="myFunction('sdksdksdkskdksdksdksdk')">
+        Log Answer
+    </button>
+
+    <section class="bg-slate-500 h-200 p-32">
+        <div class="relative h-100 w-100 m-auto bg-amber-600 mb-16">
+            <div id="object" class="absolute rounded-full bg-blue-600 h-32 w-32">
+
+            </div>
+
+        </div>
+
+        <div class="flex gap-5">
+            <div>
+                <button onclick="moveObject('top-0', 'left-0')" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    TOP-LEFT
+                </button>
+            </div>
+
+            <div>
+                <button onclick="moveObject('top-0', 'right-0')" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    TOP-RIGHT
+                </button>
+            </div>
+
+            <div>
+                <button onclick="moveObject('top-[35%]', 'left-[35%]')" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    CENTER
+                </button>
+            </div>
+            <div>
+                <button onclick="moveObject('bottom-0', 'right-0')" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    BOTTOM-RIGH
+                </button>
+            </div>
+            <div>
+                <button onclick="moveObject('bottom-0', 'left-0')" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                    BOTTOM-LEFT
+                </button>
+            </div>
+        </div>
+
+
+        <script>
+            const object = document.getElementById('object');
+
+            let moveObject = (position1, position2) => {
+                // Clear Existing Position
+                object.classList.remove('top-0', 'bottom-0', 'right-0', 'left-0', 'top-[35%]', 'left-[35%]');
+
+                // Add the new position classes
+                object.classList.add(position1, position2);
+            }
+
+
+
+            let myFunction = (parameter) => {
+                console.log(parameter);
+            }
+
+
+
+            
+        </script>
+
+
+    </section>
+</body>
+
+</html>

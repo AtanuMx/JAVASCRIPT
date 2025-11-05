@@ -19,63 +19,65 @@
 
         <div class="flex gap-5">
             <div>
-                <b onclick="MoveTopLeft('absolute top-0 left-0')"
-                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                <button onclick="MoveTopLeft()" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
                     TOP-LEFT
-                </b>
+                </button>
             </div>
 
             <div>
-                <b onclick="MoveTopRight('absolute top-0 right-0')"
-                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                <button onclick="MoveTopRight()" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
                     TOP-RIGHT
-                </b>
+                </button>
             </div>
 
             <div>
-                <b onclick="MoveCenter('absolute bottom-0 right-0')"
-                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                <button onclick="MoveCenter()" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
                     CENTER
-                </b>
+                </button>
             </div>
             <div>
-                <b onclick="MoveBottomRight('absolute bottom-0-0 right-0')"
-                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                <button onclick="MoveBottomRight()" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
                     BOTTOM-RIGH
-                </b>
+                </button>
             </div>
             <div>
-                <b onclick="MovebottomLeft('absolute top-0 right-0')"
-                    class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
+                <button onclick="MovebottomLeft()" class="py-2 px-6 bg-white mt-5 rounded-2xl text-2xl font-bold">
                     BOTTOM-LEFT
-                </b>
+                </button>
             </div>
         </div>
 
 
         <script>
+            const object = document.getElementById('object');
+
             let MoveTopRight = () => {
-                const object = document.getElementById('object');
-                object.classList.remove('top-0', 'left-0');
+                // const object = document.getElementById('object');
+                object.classList.remove('top-0', 'left-0', 'top-[35%]', 'left-[35%]');
                 object.classList.add('top-0', 'right-0');
             }
 
             let MoveTopLeft = () => {
-                const object = document.getElementById('object');
-                object.classList.remove('top-0', 'right-0');
+                // const object = document.getElementById('object');
+                object.classList.remove('top-0', 'right-0', 'top-[35%]', 'left-[35%]');
                 object.classList.add('top-0', 'left-0');
             }
 
-             let MoveBottomRight = () => {
-                const object = document.getElementById('object');
-                object.classList.remove('top-0', 'left-0');
+            let MoveBottomRight = () => {
+                // const object = document.getElementById('object');
+                object.classList.remove('top-0', 'left-0', 'top-[35%]', 'left-[35%]');
                 object.classList.add('bottom-0', 'right-0');
             }
 
             let MovebottomLeft = () => {
-                const object = document.getElementById('object');
-                object.classList.remove('bottom-0', 'right-0');
+                // const object = document.getElementById('object');
+                object.classList.remove('bottom-0', 'right-0', 'top-[35%]', 'left-[35%]');
                 object.classList.add('bottom-0', 'left-0');
+            }
+
+            let MoveCenter = () => {
+                object.classList.remove('bottom-0', 'left-0', 'right-0', 'top-0');
+                object.classList.add('top-[35%]', 'left-[35%]');
             }
         </script>
 
