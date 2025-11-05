@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Input</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="max-w-sm mx-auto my-10 min-h-96 bg-teal-200 p-6">
+        <section class="w-full bg-white rounded-md overflow-hidden border flex items-center">
+            <input type="text" name="data_input" id="data_input" class="px-4 h-10 flex-1">
+            <button class="bg-slate-400 px-4 h-10" onclick="addToList()">
+                Add
+            </button>
+        </section>
+
+        <section>
+            <h3 class="font-semibold underline my-2">List Item</h3>
+            <ul id="list-container">
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        let inputElement = document.getElementById('data_input');
+        let listContainer = document.getElementById('list-container');
+
+        let addToList = () => {
+            let value = inputElement.value; // Get the value from the input element
+
+            if (value != '') {
+                let listElement = document.createElement('li'); // create a new list item element "li"
+
+                listElement.innerText = value; // Assign the value inside the list element
+                // listElement.textContent = value;
+
+                // Append the new list item to the list container
+                listContainer.append(listElement)
+
+                // reset the input value
+                inputElement.value = '';
+                inputElement.focus()
+            }else{
+                alert('Input value is empty')
+                inputElement.focus()
+            }
+        }
+    </script>
+</body>
+
+</html>
