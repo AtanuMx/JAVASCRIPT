@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="max-w-sm mt-16 min-h-96 bg-slate-400 mx-auto p-6">
+        <div>
+           <input id="firstName" type="text" name="intextput-" class="w-80 rounded-sm py-4 bg-white">
+        </div>
+
+        <div>
+            <input id="lastName" type="text" name="input-text" class="w-80 rounded-sm py-4 bg-white mt-5">
+        </div>
+
+        <div>
+             <button onclick="ListAddingButton()" class="bg-slate-800 p-3 rounded-sm flex m-auto mt-7">
+                ADD
+             </button>
+        </div>
+
+        <section>
+         <h2 class="font-bold underline text-white">LIST OF NAMES</h2>
+         <ul id="list-container">
+
+         </ul>
+        </section>
+
+        <script>
+           let InputFirstName = document.getElementById('firstName');
+           let InputLastName = document.getElementById('lastName');
+           let ListContainer = document.getElementById('list-container');
+
+           let ListAddingButton = () => {
+                let FirstName = InputFirstName.value;
+                let LastName = InputLastName.value;
+                if (FirstName != '' && LastName != '') {
+                    let listElement = document.createElement('li');
+                    listElement.innerText = FirstName + " " + LastName;
+
+                    ListContainer.append(listElement);
+
+                    InputFirstName.value = '';
+                    InputLastName.value = '';
+
+                    InputFirstName.focus();
+
+
+                }else{
+                    alert('EMPTY INPUT VALUE');
+                    InputFirstName.focus();
+                }
+           } 
+
+        </script>
+
+        
+    </div>
+</body>
+</html>

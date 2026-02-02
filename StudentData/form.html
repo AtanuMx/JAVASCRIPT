@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./fontawesome-free-7.1.0-desktop/svgs/solid/0.svg">
+    <title>student form</title>
+</head>
+<body>
+    <div class="bg-slate-500 w-screen h-screen">
+        <form class="bg-white w-[26rem] h-screen border-4 rounded-lg border-red-400 mx-auto">
+            <h2 class="flex justify-center mt-3 font-bold">
+                STUDENT REGISTRATION FORM
+            </h2>
+            
+            <section class="p-3">
+                <div>
+                    <div>
+                        <label class="text-sm" for="">Student Name</label>
+                    </div>
+
+                   <div>
+                         <input class="border border-gray-500 rounded-sm w-96" type="text">
+                   </div>
+                </div>
+
+                <div class="flex gap-2 mb-2">
+                    <div>
+                        <label class="text-sm" for="">Mobile No</label>
+                        <input class="border border-gray-500 rounded-sm" type="number" id="">
+                    </div>
+
+                   <div>
+                        <label class="text-sm" for="">Email</label>
+                        <input class="border border-gray-500 rounded-sm" type="email" id="">
+                   </div>
+
+                </div>
+
+                <div class="flex gap-2 mb-2">
+                    <div>
+                        <label class="text-sm" for="">Guardians Name</label>
+                        <input class="border border-gray-500 rounded-sm" type="text" id="">
+                    </div>
+
+                   <div>
+                        <label class="text-sm" for="">Age</label>
+                        <input class="border border-gray-500 rounded-sm" type="number" id="">
+                   </div>
+
+                </div>
+
+                <div class="flex gap-2 mb-2">
+                    <div>
+                        <label class="text-sm" for="">Falculty</label>
+                        <input class="border border-gray-500 rounded-sm" type="text" id="">
+                    </div>
+
+                    <div>
+                        <label class="text-sm" for="">Registration Number</label>
+                        <input class="border border-gray-500 rounded-sm" type="text" id="">
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="">Gender</label>
+                </div>
+                    <input type="radio">
+                    <label for="">Male</label>
+
+                    <input type="radio">
+                    <label for="">Female</label>
+
+                <div class="mt-2 mb-2">
+                    <div>
+                        <label for="">Department</label>
+                    </div>
+                    <input type="radio" name="" id="">
+                    <label for="">ict</label>
+                    <input type="radio" name="" id="">
+                    <label for="">slt</label>
+                    <input type="radio" name="" id="">
+                    <label for="">sci</label>
+                </div>
+
+                <div>
+                    <label for="">Address</label>
+                    <input class="py-5 w-96 border border-gray-500 rounded-sm" type="text">
+                </div>
+
+                <div>
+                    <a href="">
+                        <button class="py-1 bg-red-500 w-96 rounded-sm mt-6 hover:bg-slate-600 text-white">Submit</button>
+                    </a>
+                </div>
+
+            </section>
+        </form>
+        
+    </div>
+</body>
+</html>
